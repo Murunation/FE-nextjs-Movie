@@ -24,12 +24,17 @@ export default function Cards(): JSX.Element {
     <div>
       <div>Movies</div>
       <div className="w-full flex flex-wrap justify-center ">
+        
+        
         {movies &&
           movies.map((movies: Movie, index: number) => (
             <Card _id={""} {...movies} key={index} />
           ))}
+        
 
-        {/* <Card data={movies} key={} /> */}
+        
+
+        
       </div>
     </div>
   );

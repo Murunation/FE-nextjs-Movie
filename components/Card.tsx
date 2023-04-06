@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface Movie {
@@ -21,7 +22,7 @@ export default function Card(prop: Movie): JSX.Element {
   return (
     <div className="flex justify-center">
       <div className="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700">
-        <a href={`${prop._id}`}>
+        <Link href={`movies/${prop._id}`} >
           <img className="rounded-t-lg" src={prop.poster} alt="" />
           <div className="p-6">
             <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
@@ -39,7 +40,7 @@ export default function Card(prop: Movie): JSX.Element {
               Button
             </button>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );
