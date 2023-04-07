@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+.header-main {
+  background-color: #fe0000;
+}
+.header-img {
+  width: 20%;
+}

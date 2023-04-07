@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { MovieType } from "@/util/type";
-import { log } from "console";
 
 export default function Movie() {
   const [data, setData] = useState<MovieType | null>(null);
@@ -17,22 +16,21 @@ export default function Movie() {
   }, [query.id]);
 
   console.log(data);
-  
 
-  return <div>
-    ID: {query.id}
-
+  return (
     <div>
-      {data && (
-        <div>
-          <h2>{data.title}</h2>
-          <picture>
-            <img src={data.poster} alt="movie picture" />
-          </picture>
-          <p>{data.fullplot}</p>
-        </div>
-      )}
+      ID: {query.id}
+      <div>
+        {data && (
+          <div>
+            <h2>{data.title}</h2>
+            <picture>
+              <img src={data.poster} alt="movie picture" />
+            </picture>
+            <p>{data.fullplot}</p>
+          </div>
+        )}
+      </div>
     </div>
-
-  </div>;
+  );
 }
