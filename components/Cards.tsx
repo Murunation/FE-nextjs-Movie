@@ -22,19 +22,12 @@ export default function Cards(): JSX.Element {
 
   return (
     <div>
-      <div>Movies</div>
-      <div className="w-full flex flex-wrap justify-center ">
-        
-        
+      <div>NEW & UPCOMING MOVIES</div>
+      <div className="w-full flex flex-wrap justify-center space-x-4">
         {movies &&
           movies.map((movies: Movie, index: number) => (
             <Card _id={""} {...movies} key={index} />
           ))}
-        
-
-        
-
-        
       </div>
     </div>
   );

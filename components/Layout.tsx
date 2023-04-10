@@ -15,8 +15,8 @@ export default function Layout({ children }: PropType) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="favicon.io" />
       </Head>
-      <Header></Header>
-      <main>{children}</main>
+      <Header />
+      <main className="h-screen">{children}</main>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Header(): JSX.Element {
@@ -5,7 +6,7 @@ export default function Header(): JSX.Element {
     <div>
       <nav className="border-gray-200 bg-[#fe0000] dark:bg-gray-800 dark:border-gray-700">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="#" className="flex items-center">
+          <Link href={`/`}>
             <picture>
               <img
                 src="https://images.fandango.com/cms/assets/bf631b80-bf47-11ed-a868-adceb8892ad3--rt25-logo-mainnav-322x100.png"
@@ -13,7 +14,7 @@ export default function Header(): JSX.Element {
                 alt="Flowbite Logo"
               />
             </picture>
-          </a>
+          </Link>
 
           <form>
             <label
@@ -64,7 +65,7 @@ export default function Header(): JSX.Element {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-white bg-dark-700 rounded md:bg-transparent md:text-[black] md:p-0 md:dark:text-blue-500  md:dark:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-[white] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[black] md:p-0 dark:text-white md:dark:hover:text-[black] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   aria-current="page"
                 >
                   Home
